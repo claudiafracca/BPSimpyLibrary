@@ -1,6 +1,7 @@
-# BPSimpyLibrary
+# BPSimpy Library
 
-a Python library that can be used to programmaticallygenerate the executable simulation model for simulation of business processes. BPSimpy library generates executable simulation model compliant with the Business ProcessSimulation Specification ([BPSim](https://www.bpsim.org/)), a standard from WfMC (Workflow Manage-ment Coalition) that enables a seamless integration with different simulation software products.
+A Python library that can be used to programmatically generate the executable simulation model for simulation of business processes.
+BPSimpy library generates executable simulation model compliant with the Business ProcessSimulation Specification ([BPSim](https://www.bpsim.org/)), a standard from WfMC (Workflow Manage-ment Coalition) that enables a seamless integration with different simulation software products.
 
 ### Tutorial
 
@@ -11,3 +12,8 @@ Here, we provide the code to use the BPSimpy in a case study.
 ### Data
 
 The event log is taken from the Second International Business Process Intelligence Challenge [BPI2012](https://www.win.tue.nl/bpi/doku.php?id=2012:challenge)
+
+
+
+
+
