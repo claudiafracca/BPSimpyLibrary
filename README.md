@@ -19,4 +19,4 @@ Link video
 
 ### More information
 
-In the paper and links of BPSim
+For more informations please see also [BPSim Documentation](https://www.bpsim.org/specifications/2.0/WFMC-BPSWG-2016-01.pdf) and [BPSim Implementer's Guide](https://www.bpsim.org/).
