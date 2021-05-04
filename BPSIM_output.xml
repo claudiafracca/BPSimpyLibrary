@@ -1,0 +1,875 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:esteco="http://www.esteco.com/BPMN/Extensions" xmlns:ns0="xmlns" id="_0" name="definitions" exporterVersion="13.4.0" exporter="Cardanit" targetNamespace="http://www.esteco.com/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd" ns0:bpsim="http://www.bpsim.org/schemas/1.0" ns0:lsim="urn:lanner.simulation.lsim.model.data">
+  <bpmn2:itemDefinition id="_101" structureRef="Long" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_104" structureRef="Double" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_105" structureRef="Boolean" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_106" structureRef="URI" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_107" structureRef="String" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_111" structureRef="Array.Long" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_114" structureRef="Array.Double" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_115" structureRef="Array.Boolean" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_116" structureRef="Array.URI" itemKind="Information" isCollection="false"/>
+  <bpmn2:itemDefinition id="_117" structureRef="Array.String" itemKind="Information" isCollection="false"/>
+  <bpmn2:process id="_11" name="Process" isClosed="true">
+    <bpmn2:endEvent id="endEvents_376918cb-4024-8def-a0bf-abd771a2ddb7" name="end">
+      <bpmn2:incoming>sequenceFlows_96bbc04a-dc96-61aa-c555-4b5cb2d1a09a</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_8df42361-ec91-d303-b8b7-daf710e5c0bf</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_6d82c9e3-8f23-e545-fcf1-60c0130fe1cc</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="exclusiveGateways_b81b3d7b-0290-c3b5-0f10-54ce71540576" name="ExclusiveGateway1" gatewayDirection="Diverging">
+      <bpmn2:incoming>sequenceFlows_0aab1862-b436-6e6d-7735-bb81fbd0214e</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_784dd4ac-743c-3f11-0169-8375ca90ad73</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_f16bf808-8de0-6b85-6a7d-a239788f6eef</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="exclusiveGateways_eb94dfb4-29a5-1d0c-e26b-b032e9210369" name="ExclusiveGateway2" gatewayDirection="Diverging">
+      <bpmn2:incoming>sequenceFlows_f84090b7-aabf-72fa-a419-3e973650ed0a</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_89f92e11-8ea6-d53e-bdf4-e985e2dfcf9b</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_a76df33b-b95b-3b2d-8f7f-41a5e647b1b1</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="exclusiveGateways_15db9531-87e6-ddef-8ff0-254389ae4da7" name="ExclusiveGateway3">
+      <bpmn2:incoming>sequenceFlows_0e2e263f-1223-8dd9-9b91-3f9e3952beeb</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_a76df33b-b95b-3b2d-8f7f-41a5e647b1b1</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_10c6ac0c-b13b-7f50-5546-fb304ea0d308</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_0d54ab7f-894c-f9b1-3a4a-a1bfe8d57d60</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5" name="ExclusiveGateway4">
+      <bpmn2:incoming>sequenceFlows_4b0777da-d7e6-4a6a-1df5-5415e67b677a</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_0d54ab7f-894c-f9b1-3a4a-a1bfe8d57d60</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_f16bf808-8de0-6b85-6a7d-a239788f6eef</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_93123ed7-06dc-5053-450e-a4c1a27abf66</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_c4f11fe1-3760-9ae8-9076-07de3978aded</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_7cf1508c-fda4-1442-2e65-a5d1d1a77f81</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:parallelGateway id="parallelGateways_1f91d40c-78f3-655c-28a0-c07ad09ed104" name="ParallelGateway1" gatewayDirection="Diverging">
+      <bpmn2:incoming>sequenceFlows_c4f11fe1-3760-9ae8-9076-07de3978aded</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_cadb618d-e0a7-836c-05bb-b1f800d915a9</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_5f81c47a-bb60-79ac-21e2-4875ba1172d3</bpmn2:outgoing>
+      <bpmn2:outgoing>sequenceFlows_bf49344b-b222-c8d2-427b-fcd31932e5bb</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:parallelGateway id="parallelGateways_3b26dc71-8256-8fee-39fe-e02b58155b6c" name="Parallel Gateway2" gatewayDirection="Converging">
+      <bpmn2:incoming>sequenceFlows_b7b570c8-6bf0-c733-cd70-d2375e6bb97e</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_d10351b8-0795-4df1-2dc7-7148ec47e5be</bpmn2:incoming>
+      <bpmn2:incoming>sequenceFlows_6c08ec48-a848-a664-4a23-fd4c202a8b9e</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_6d82c9e3-8f23-e545-fcf1-60c0130fe1cc</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:sequenceFlow id="sequenceFlows_54fc3932-d5b3-56a4-ab61-996259e473fb" name="seq1" sourceRef="startEvents_3414b2b3-dcb9-147f-92a3-bee2498031e2" targetRef="tasks_fc5d7a30-7083-c180-4ee4-095026a6b447"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_b715fb74-3bd7-1f49-1d14-11b7f385b72b" name="seq2" sourceRef="tasks_fc5d7a30-7083-c180-4ee4-095026a6b447" targetRef="tasks_98da5344-ab55-ad60-825a-6ca407695b6b"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_0aab1862-b436-6e6d-7735-bb81fbd0214e" name="seq3" sourceRef="tasks_98da5344-ab55-ad60-825a-6ca407695b6b" targetRef="exclusiveGateways_b81b3d7b-0290-c3b5-0f10-54ce71540576"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_784dd4ac-743c-3f11-0169-8375ca90ad73" name="seq4" sourceRef="exclusiveGateways_b81b3d7b-0290-c3b5-0f10-54ce71540576" targetRef="tasks_21579b07-30ab-2c7f-df51-219dfa30eb72"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_f84090b7-aabf-72fa-a419-3e973650ed0a" name="seq6" sourceRef="tasks_21579b07-30ab-2c7f-df51-219dfa30eb72" targetRef="exclusiveGateways_eb94dfb4-29a5-1d0c-e26b-b032e9210369"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_89f92e11-8ea6-d53e-bdf4-e985e2dfcf9b" name="seq8" sourceRef="exclusiveGateways_eb94dfb4-29a5-1d0c-e26b-b032e9210369" targetRef="tasks_14660ced-208d-9189-076d-bf98985f0993"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_0e2e263f-1223-8dd9-9b91-3f9e3952beeb" sourceRef="tasks_14660ced-208d-9189-076d-bf98985f0993" targetRef="exclusiveGateways_15db9531-87e6-ddef-8ff0-254389ae4da7"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_a76df33b-b95b-3b2d-8f7f-41a5e647b1b1" name="seq7" sourceRef="exclusiveGateways_eb94dfb4-29a5-1d0c-e26b-b032e9210369" targetRef="exclusiveGateways_15db9531-87e6-ddef-8ff0-254389ae4da7"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_10c6ac0c-b13b-7f50-5546-fb304ea0d308" name="seq9" sourceRef="exclusiveGateways_15db9531-87e6-ddef-8ff0-254389ae4da7" targetRef="tasks_9980786c-add3-523c-4b33-7269dba7747f"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_4b0777da-d7e6-4a6a-1df5-5415e67b677a" name="seq11" sourceRef="tasks_9980786c-add3-523c-4b33-7269dba7747f" targetRef="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_0d54ab7f-894c-f9b1-3a4a-a1bfe8d57d60" name="seq10" sourceRef="exclusiveGateways_15db9531-87e6-ddef-8ff0-254389ae4da7" targetRef="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_93123ed7-06dc-5053-450e-a4c1a27abf66" name="seq12" sourceRef="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5" targetRef="tasks_219c0383-7c8f-583b-afed-d89b511f41db"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_c4f11fe1-3760-9ae8-9076-07de3978aded" name="seq13" sourceRef="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5" targetRef="parallelGateways_1f91d40c-78f3-655c-28a0-c07ad09ed104"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_7cf1508c-fda4-1442-2e65-a5d1d1a77f81" name="seq14" sourceRef="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5" targetRef="tasks_deb4b459-ff13-b0f3-0a38-8305d62478de"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_cadb618d-e0a7-836c-05bb-b1f800d915a9" name="seq17" sourceRef="parallelGateways_1f91d40c-78f3-655c-28a0-c07ad09ed104" targetRef="tasks_67171d06-f6a7-f7b4-52a9-1359034a1d0d"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_5f81c47a-bb60-79ac-21e2-4875ba1172d3" name="seq16" sourceRef="parallelGateways_1f91d40c-78f3-655c-28a0-c07ad09ed104" targetRef="tasks_7e1ea195-3071-eb10-2687-fe2396c11aaf"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_bf49344b-b222-c8d2-427b-fcd31932e5bb" name="seq15" sourceRef="parallelGateways_1f91d40c-78f3-655c-28a0-c07ad09ed104" targetRef="tasks_6a7ba182-b672-925c-39db-48f9580c475b"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_96bbc04a-dc96-61aa-c555-4b5cb2d1a09a" name="seq21" sourceRef="tasks_219c0383-7c8f-583b-afed-d89b511f41db" targetRef="endEvents_376918cb-4024-8def-a0bf-abd771a2ddb7"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_8df42361-ec91-d303-b8b7-daf710e5c0bf" name="seq22" sourceRef="tasks_deb4b459-ff13-b0f3-0a38-8305d62478de" targetRef="endEvents_376918cb-4024-8def-a0bf-abd771a2ddb7"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_f16bf808-8de0-6b85-6a7d-a239788f6eef" name="seq5" sourceRef="exclusiveGateways_b81b3d7b-0290-c3b5-0f10-54ce71540576" targetRef="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_b7b570c8-6bf0-c733-cd70-d2375e6bb97e" name="seq18" sourceRef="tasks_6a7ba182-b672-925c-39db-48f9580c475b" targetRef="parallelGateways_3b26dc71-8256-8fee-39fe-e02b58155b6c"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_d10351b8-0795-4df1-2dc7-7148ec47e5be" name="seq19" sourceRef="tasks_7e1ea195-3071-eb10-2687-fe2396c11aaf" targetRef="parallelGateways_3b26dc71-8256-8fee-39fe-e02b58155b6c"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_6c08ec48-a848-a664-4a23-fd4c202a8b9e" name="seq20" sourceRef="tasks_67171d06-f6a7-f7b4-52a9-1359034a1d0d" targetRef="parallelGateways_3b26dc71-8256-8fee-39fe-e02b58155b6c"/>
+    <bpmn2:sequenceFlow id="sequenceFlows_6d82c9e3-8f23-e545-fcf1-60c0130fe1cc" name="seq23" sourceRef="parallelGateways_3b26dc71-8256-8fee-39fe-e02b58155b6c" targetRef="endEvents_376918cb-4024-8def-a0bf-abd771a2ddb7"/>
+    <bpmn2:startEvent id="startEvents_3414b2b3-dcb9-147f-92a3-bee2498031e2" name="Start">
+      <bpmn2:outgoing>sequenceFlows_54fc3932-d5b3-56a4-ab61-996259e473fb</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:task id="tasks_fc5d7a30-7083-c180-4ee4-095026a6b447" name="A_SUBMITTED">
+      <bpmn2:incoming>sequenceFlows_54fc3932-d5b3-56a4-ab61-996259e473fb</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_b715fb74-3bd7-1f49-1d14-11b7f385b72b</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_98da5344-ab55-ad60-825a-6ca407695b6b" name="A_PARTLYSUBMITTED">
+      <bpmn2:incoming>sequenceFlows_b715fb74-3bd7-1f49-1d14-11b7f385b72b</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_0aab1862-b436-6e6d-7735-bb81fbd0214e</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_21579b07-30ab-2c7f-df51-219dfa30eb72" name="A_PREACCEPTED">
+      <bpmn2:incoming>sequenceFlows_784dd4ac-743c-3f11-0169-8375ca90ad73</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_f84090b7-aabf-72fa-a419-3e973650ed0a</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_14660ced-208d-9189-076d-bf98985f0993" name="A_ACCEPTED">
+      <bpmn2:incoming>sequenceFlows_89f92e11-8ea6-d53e-bdf4-e985e2dfcf9b</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_0e2e263f-1223-8dd9-9b91-3f9e3952beeb</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_9980786c-add3-523c-4b33-7269dba7747f" name="A_FINALIZED">
+      <bpmn2:incoming>sequenceFlows_10c6ac0c-b13b-7f50-5546-fb304ea0d308</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_4b0777da-d7e6-4a6a-1df5-5415e67b677a</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_219c0383-7c8f-583b-afed-d89b511f41db" name="A_CANCELLED">
+      <bpmn2:incoming>sequenceFlows_93123ed7-06dc-5053-450e-a4c1a27abf66</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_96bbc04a-dc96-61aa-c555-4b5cb2d1a09a</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_deb4b459-ff13-b0f3-0a38-8305d62478de" name="A_DECLINED">
+      <bpmn2:incoming>sequenceFlows_7cf1508c-fda4-1442-2e65-a5d1d1a77f81</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_8df42361-ec91-d303-b8b7-daf710e5c0bf</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_67171d06-f6a7-f7b4-52a9-1359034a1d0d" name="A_REGISTERED">
+      <bpmn2:incoming>sequenceFlows_cadb618d-e0a7-836c-05bb-b1f800d915a9</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_6c08ec48-a848-a664-4a23-fd4c202a8b9e</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_7e1ea195-3071-eb10-2687-fe2396c11aaf" name="A_ACTIVATED">
+      <bpmn2:incoming>sequenceFlows_5f81c47a-bb60-79ac-21e2-4875ba1172d3</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_d10351b8-0795-4df1-2dc7-7148ec47e5be</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="tasks_6a7ba182-b672-925c-39db-48f9580c475b" name="A_APPROVED">
+      <bpmn2:incoming>sequenceFlows_bf49344b-b222-c8d2-427b-fcd31932e5bb</bpmn2:incoming>
+      <bpmn2:outgoing>sequenceFlows_b7b570c8-6bf0-c733-cd70-d2375e6bb97e</bpmn2:outgoing>
+    </bpmn2:task>
+  </bpmn2:process>
+  <bpmn2:resource id="role0" name="0"/>
+  <bpmn2:resource id="role1" name="1"/>
+  <bpmn2:resource id="role2" name="2"/>
+  <bpmn2:resource id="role3" name="3"/>
+  <bpmn2:resource id="role4" name="4"/>
+  <bpmn2:resource id="role5" name="5"/>
+  <bpmndi:BPMNDiagram id="_1000" name="Diagram">
+    <bpmndi:BPMNPlane id="_1000111" bpmnElement="_11">
+      <bpmndi:BPMNShape bpmnElement="startEvents_3414b2b3-dcb9-147f-92a3-bee2498031e2" id="shape_733ec4df-7498-7bd6-9ffe-2ae369bde6fe">
+        <dc:Bounds x="106" y="322" width="32" height="32"/>
+        <bpmndi:BPMNLabel id="label_26703fbf-c90b-45f3-8e0b-4722f3cc9d93">
+          <dc:Bounds x="62" y="369" width="120" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endEvents_376918cb-4024-8def-a0bf-abd771a2ddb7" id="shape_04b030f2-6208-ce23-7516-dda2ef301e29">
+        <dc:Bounds x="2183" y="190" width="32" height="32"/>
+        <bpmndi:BPMNLabel id="label_2e284d5a-b416-ecb6-35aa-0c6cc7f69da4">
+          <dc:Bounds x="2139" y="237" width="120" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_fc5d7a30-7083-c180-4ee4-095026a6b447" id="shape_b984828f-2df1-dbe1-99bb-8964f11e0e22">
+        <dc:Bounds x="198" y="308" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_24602477-743e-341d-06c5-3aa5329e6a60">
+          <dc:Bounds x="222.8220443725586" y="330.8" width="70.35591125488281" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_98da5344-ab55-ad60-825a-6ca407695b6b" id="shape_a40fc1b0-6353-8a81-926a-e238dffe32c1">
+        <dc:Bounds x="389" y="308" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_3276d0f0-cb88-8364-48ab-3c7d3e81d03e">
+          <dc:Bounds x="413.8220443725586" y="330.8" width="70.35591125488281" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_21579b07-30ab-2c7f-df51-219dfa30eb72" id="shape_f1d03e7e-5e3c-6635-ff48-2c442c136449">
+        <dc:Bounds x="715" y="99" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_86f4933a-3b0f-ae6e-b3a3-088182d30efa">
+          <dc:Bounds x="739.8220443725586" y="121.80000000000001" width="70.35591125488281" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_14660ced-208d-9189-076d-bf98985f0993" id="shape_54eb5949-b03b-27d3-0bfc-f896b67bdda4">
+        <dc:Bounds x="1001" y="42" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_ced6b635-c76a-5e85-28da-65cc001a5306">
+          <dc:Bounds x="1025.8220443725586" y="64.8" width="70.35591125488281" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_9980786c-add3-523c-4b33-7269dba7747f" id="shape_c98ffdfb-4137-0ecb-641d-6e58b1f53cbc">
+        <dc:Bounds x="1315" y="42" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_e6600686-89ee-05f1-fa1d-7078c0f0bb89">
+          <dc:Bounds x="1339.8220443725586" y="64.80000000000001" width="70.35591125488281" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_219c0383-7c8f-583b-afed-d89b511f41db" id="shape_27d46f09-097d-4bb7-f27c-4df20e8bb7c4">
+        <dc:Bounds x="1877" y="3" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_d88c799d-7d90-bde0-cb5a-8eef309c8d9c">
+          <dc:Bounds x="1901.8220443725586" y="25.80000000000001" width="70.35591125488281" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_deb4b459-ff13-b0f3-0a38-8305d62478de" id="shape_106bf17a-399a-1ed9-6a8a-4887ac696f03">
+        <dc:Bounds x="1871" y="437" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_380b36a1-a6b4-20ba-265d-4e16a3677616">
+          <dc:Bounds x="1892.3420486450195" y="459.8" width="77.31590270996094" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_67171d06-f6a7-f7b4-52a9-1359034a1d0d" id="shape_7f278d68-194e-a3bb-b023-211e410085f7">
+        <dc:Bounds x="1871" y="279" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_299216b1-f5af-2e0f-edc5-32968571141f">
+          <dc:Bounds x="1892.3420486450195" y="301.8" width="77.31590270996094" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_7e1ea195-3071-eb10-2687-fe2396c11aaf" id="shape_6a151674-3018-d0f7-4386-689b3f401763">
+        <dc:Bounds x="1871" y="176" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_d1472200-42eb-16bf-795a-f9dd448d3a01">
+          <dc:Bounds x="1892.3420486450195" y="198.8" width="77.31590270996094" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="tasks_6a7ba182-b672-925c-39db-48f9580c475b" id="shape_2125f80c-916a-b676-cc9c-e809fbf2f0af">
+        <dc:Bounds x="1871" y="79" width="120" height="60"/>
+        <bpmndi:BPMNLabel id="label_c49f440b-531e-4cfb-2bf5-847e7af74da1">
+          <dc:Bounds x="1892.3420486450195" y="101.80000000000001" width="77.31590270996094" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusiveGateways_b81b3d7b-0290-c3b5-0f10-54ce71540576" id="shape_aa2cfc88-c3f8-223c-f7cc-b655e08d0d5f" isMarkerVisible="true">
+        <dc:Bounds x="624" y="318" width="40" height="40"/>
+        <bpmndi:BPMNLabel id="label_64a8ccb0-44a0-5b98-c4c2-baef8d16f6d0">
+          <dc:Bounds x="585.794059753418" y="373" width="116.41188049316406" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusiveGateways_eb94dfb4-29a5-1d0c-e26b-b032e9210369" id="shape_776fbe3b-cfd3-438d-0c80-c005df2fd235" isMarkerVisible="true">
+        <dc:Bounds x="895" y="134" width="40" height="40"/>
+        <bpmndi:BPMNLabel id="label_751933d8-982c-94a4-8481-232af701328a">
+          <dc:Bounds x="856.794059753418" y="189" width="116.41188049316406" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusiveGateways_15db9531-87e6-ddef-8ff0-254389ae4da7" id="shape_9ec2abee-0daa-8f4e-ac68-5909187880e1" isMarkerVisible="true">
+        <dc:Bounds x="1178" y="119" width="40" height="40"/>
+        <bpmndi:BPMNLabel id="label_65111b2b-5a21-206b-f9ab-50df268fcb6c">
+          <dc:Bounds x="1139.794059753418" y="174" width="116.41188049316406" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusiveGateways_256946a9-c769-d45d-761e-fbdde313ecd5" id="shape_d171df74-723a-2c57-83bf-085c142c56df" isMarkerVisible="true">
+        <dc:Bounds x="1433" y="320" width="40" height="40"/>
+        <bpmndi:BPMNLabel id="label_3558fe6c-45e0-4086-11a5-95792d778eb8">
+          <dc:Bounds x="1394.794059753418" y="375" width="116.41188049316406" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="parallelGateways_1f91d40c-78f3-655c-28a0-c07ad09ed104" id="shape_06ade10f-e22e-c230-7091-d12688fe5692">
+        <dc:Bounds x="1718" y="176" width="40" height="40"/>
+        <bpmndi:BPMNLabel id="label_3a2f63a9-ea4c-e04a-14ad-692e42c1d2ca">
+          <dc:Bounds x="1684.4200592041016" y="231" width="107.15988159179688" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="parallelGateways_3b26dc71-8256-8fee-39fe-e02b58155b6c" id="shape_eedb4b80-56b7-3ddf-4111-4c7ae7a24560">
+        <dc:Bounds x="2083" y="186" width="40" height="40"/>
+        <bpmndi:BPMNLabel id="label_876fd7aa-bf7e-a72a-7d66-2409ed973f04">
+          <dc:Bounds x="2045.9400634765625" y="241" width="114.119873046875" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_54fc3932-d5b3-56a4-ab61-996259e473fb" id="edge_2cc724c7-c36d-ff2f-b730-59197f813bd7">
+        <di:waypoint x="138" y="338"/>
+        <di:waypoint x="198" y="338"/>
+        <bpmndi:BPMNLabel id="label_67d56161-a8ce-cac6-2735-1e2f63188d31">
+          <dc:Bounds x="128" y="316" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_b715fb74-3bd7-1f49-1d14-11b7f385b72b" id="edge_87674e90-46d0-9446-aabe-39351eaf4aa3">
+        <di:waypoint x="318" y="338"/>
+        <di:waypoint x="389" y="338"/>
+        <bpmndi:BPMNLabel id="label_80a2086b-1a48-9c27-6a9d-6175bf63310d">
+          <dc:Bounds x="313.5" y="316" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_0aab1862-b436-6e6d-7735-bb81fbd0214e" id="edge_b46f8a81-4caf-d64a-330a-ef60376faf30">
+        <di:waypoint x="509" y="338"/>
+        <di:waypoint x="624" y="338"/>
+        <bpmndi:BPMNLabel id="label_e019c258-700a-a7b2-8470-46a96d1868fc">
+          <dc:Bounds x="526.5" y="316" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_784dd4ac-743c-3f11-0169-8375ca90ad73" id="edge_235e2f6a-2831-d688-977f-c6b079b08cef">
+        <di:waypoint x="657" y="318"/>
+        <di:waypoint x="756" y="159"/>
+        <bpmndi:BPMNLabel id="label_aecf25e5-2449-9342-b2f5-60144378c824">
+          <dc:Bounds x="666.5" y="216.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_f84090b7-aabf-72fa-a419-3e973650ed0a" id="edge_d41e4fc1-d0b1-4a83-1070-a46c0c8f160f">
+        <di:waypoint x="835" y="140"/>
+        <di:waypoint x="895" y="150"/>
+        <bpmndi:BPMNLabel id="label_5da9f7ee-bb95-123c-200b-3210a5286da3">
+          <dc:Bounds x="825" y="123" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_89f92e11-8ea6-d53e-bdf4-e985e2dfcf9b" id="edge_23b0f5ef-0523-d1ca-0892-e9b3138eeff7">
+        <di:waypoint x="935" y="143"/>
+        <di:waypoint x="1008" y="102"/>
+        <bpmndi:BPMNLabel id="label_d9d1877e-175d-a513-86ff-1f9bf7c7b4f2">
+          <dc:Bounds x="931.5" y="100.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_0e2e263f-1223-8dd9-9b91-3f9e3952beeb" id="edge_80d21cbd-1126-1938-8039-b38dcbbe6e59">
+        <di:waypoint x="1121" y="101"/>
+        <di:waypoint x="1178" y="129"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_a76df33b-b95b-3b2d-8f7f-41a5e647b1b1" id="edge_c1391d7e-cf0d-0e72-248c-6b8935727fc6">
+        <di:waypoint x="935" y="153"/>
+        <di:waypoint x="1178" y="140"/>
+        <bpmndi:BPMNLabel id="label_4a9fae12-ee40-cb4a-539d-dd2ccf0c2e70">
+          <dc:Bounds x="1016.5" y="124.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_10c6ac0c-b13b-7f50-5546-fb304ea0d308" id="edge_4a38cb80-e16b-199b-b18e-c57e7a20d7a7">
+        <di:waypoint x="1218" y="131"/>
+        <di:waypoint x="1315" y="95"/>
+        <bpmndi:BPMNLabel id="label_c1966159-0564-3a14-d1e5-64f2666e2e1b">
+          <dc:Bounds x="1226.5" y="91" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_4b0777da-d7e6-4a6a-1df5-5415e67b677a" id="edge_b47b56c8-2fd1-417e-ddff-50a8ef7164c1">
+        <di:waypoint x="1384" y="102"/>
+        <di:waypoint x="1447" y="320"/>
+        <bpmndi:BPMNLabel id="label_bbce62b8-0736-0f1c-fccb-2a7348ebbc23">
+          <dc:Bounds x="1375.5" y="189" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_0d54ab7f-894c-f9b1-3a4a-a1bfe8d57d60" id="edge_0a11700e-f6b6-58ed-a773-62d1144dbada">
+        <di:waypoint x="1218" y="155"/>
+        <di:waypoint x="1433" y="324"/>
+        <bpmndi:BPMNLabel id="label_bd243d17-fa7f-aad5-ca76-05706cc93861">
+          <dc:Bounds x="1285.5" y="217.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_93123ed7-06dc-5053-450e-a4c1a27abf66" id="edge_67cd495e-5747-d789-ea63-b800103e8558">
+        <di:waypoint x="1473" y="327"/>
+        <di:waypoint x="1890" y="63"/>
+        <bpmndi:BPMNLabel id="label_850adde4-3d62-4c8e-1d36-b3d83408a4fc">
+          <dc:Bounds x="1641.5" y="173" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_c4f11fe1-3760-9ae8-9076-07de3978aded" id="edge_a5eb9561-2fbc-3b4b-6380-925db2d26208">
+        <di:waypoint x="1473" y="330"/>
+        <di:waypoint x="1718" y="206"/>
+        <bpmndi:BPMNLabel id="label_4a47ece5-4108-f54a-18f6-fc54e4f34176">
+          <dc:Bounds x="1555.5" y="246" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_7cf1508c-fda4-1442-2e65-a5d1d1a77f81" id="edge_77a1d6bc-8783-fda5-1e81-2f7032b4cf1d">
+        <di:waypoint x="1473" y="345"/>
+        <di:waypoint x="1871" y="451"/>
+        <bpmndi:BPMNLabel id="label_5c45610a-49a0-5efa-e492-cdab1b1c3966">
+          <dc:Bounds x="1632" y="376" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_cadb618d-e0a7-836c-05bb-b1f800d915a9" id="edge_5b6c1d17-8799-a12d-4c4b-bf3ab2fa7505">
+        <di:waypoint x="1758" y="208"/>
+        <di:waypoint x="1880" y="279"/>
+        <bpmndi:BPMNLabel id="label_4b3ccf6d-3538-6b32-6524-c5660539ce35">
+          <dc:Bounds x="1779" y="221.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_5f81c47a-bb60-79ac-21e2-4875ba1172d3" id="edge_66a1abcf-644e-34cf-9c4f-255796a6ae66">
+        <di:waypoint x="1758" y="197"/>
+        <di:waypoint x="1871" y="203"/>
+        <bpmndi:BPMNLabel id="label_0423e329-1325-043f-6c36-37d3d76c4694">
+          <dc:Bounds x="1774.5" y="178" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_bf49344b-b222-c8d2-427b-fcd31932e5bb" id="edge_41f15eaf-7e95-bfbf-9043-f900cf17daa9">
+        <di:waypoint x="1758" y="187"/>
+        <di:waypoint x="1871" y="136"/>
+        <bpmndi:BPMNLabel id="label_b76b448c-6770-df8d-89ad-5dddbc64e8ab">
+          <dc:Bounds x="1774.5" y="139.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_96bbc04a-dc96-61aa-c555-4b5cb2d1a09a" id="edge_8ad47947-c145-d579-cb63-469e008af4d8">
+        <di:waypoint x="1997" y="33"/>
+        <di:waypoint x="2090" y="33"/>
+        <di:waypoint x="2163" y="137"/>
+        <di:waypoint x="2191" y="190"/>
+        <bpmndi:BPMNLabel id="label_3373564d-6a3b-fbf4-b0cf-b3d6c64fe8cb">
+          <dc:Bounds x="2086.5" y="63" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_8df42361-ec91-d303-b8b7-daf710e5c0bf" id="edge_462bd46c-e3f6-70f4-c177-68d762d2dd5c">
+        <di:waypoint x="1991" y="467"/>
+        <di:waypoint x="2087" y="467"/>
+        <di:waypoint x="2168" y="352"/>
+        <di:waypoint x="2196" y="222"/>
+        <bpmndi:BPMNLabel id="label_df13891a-8fb7-a18d-722a-2437eea4fda6">
+          <dc:Bounds x="2087.5" y="387.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_f16bf808-8de0-6b85-6a7d-a239788f6eef" id="edge_d709791a-6805-20e2-d588-86f10ea62611">
+        <di:waypoint x="664" y="338"/>
+        <di:waypoint x="1433" y="340"/>
+        <bpmndi:BPMNLabel id="label_fff5ac7a-8111-7dc6-65dc-fd4ad02e3670">
+          <dc:Bounds x="1008.5" y="317" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_b7b570c8-6bf0-c733-cd70-d2375e6bb97e" id="edge_272d8cbf-a3de-2949-7ccc-92c28547cffd">
+        <di:waypoint x="1991" y="109"/>
+        <di:waypoint x="2037" y="109"/>
+        <di:waypoint x="2037" y="206"/>
+        <di:waypoint x="2083" y="206"/>
+        <bpmndi:BPMNLabel id="label_02c11961-3532-c4af-151b-c07ea52f2852">
+          <dc:Bounds x="1997" y="135.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_d10351b8-0795-4df1-2dc7-7148ec47e5be" id="edge_7886d300-1de8-2eed-8ec6-2829f5aec75a">
+        <di:waypoint x="1991" y="206"/>
+        <di:waypoint x="2083" y="206"/>
+        <bpmndi:BPMNLabel id="label_09fada49-65fc-6945-d699-69511024ade2">
+          <dc:Bounds x="1997" y="184" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_6c08ec48-a848-a664-4a23-fd4c202a8b9e" id="edge_a5aa2ec5-52aa-67eb-39c3-093fe47f6448">
+        <di:waypoint x="1991" y="309"/>
+        <di:waypoint x="2037" y="309"/>
+        <di:waypoint x="2037" y="206"/>
+        <di:waypoint x="2083" y="206"/>
+        <bpmndi:BPMNLabel id="label_7f372c09-a30f-ad53-4399-e91e8ced179b">
+          <dc:Bounds x="1997" y="235.5" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlows_6d82c9e3-8f23-e545-fcf1-60c0130fe1cc" id="edge_3df03420-bc97-b7df-8e30-db2432c0cde7">
+        <di:waypoint x="2123" y="206"/>
+        <di:waypoint x="2183" y="206"/>
+        <bpmndi:BPMNLabel id="label_6570394b-0b39-8f1c-eecd-e98b3ff68c22">
+          <dc:Bounds x="2113" y="184" width="80" height="14.399999999999999"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData xmlns:bpsim="http://www.bpsim.org/schemas/1.0">
+        <bpsim:Scenario id="S" name="Scenario" author="Claudia" description="This is a scenario">
+          <bpsim:ScenarioParameters replication="1" baseTimeUnit="min">
+            <bpsim:Start>
+              <bpsim:DateTimeParameter value="2021-10-01T00:00:00"/>
+            </bpsim:Start>
+            <bpsim:Duration>
+              <bpsim:DurationParameter value="P300D"/>
+            </bpsim:Duration>
+            <bpsim:Warmup>
+              <bpsim:DurationParameter value="P1D"/>
+            </bpsim:Warmup>
+          </bpsim:ScenarioParameters>
+          <bpsim:ElementParameters elementRef="startEvents_3414b2b3-dcb9-147f-92a3-bee2498031e2">
+            <bpsim:ControlParameters>
+              <bpsim:InterTriggerTimer>
+                <bpsim:StringParameter value="300"/>
+                <bpsim:NegativeExponentialDistribution mean="11" validFor="Case Arrival Calendar"/>
+              </bpsim:InterTriggerTimer>
+              <bpsim:TriggerCount>
+                <bpsim:NumericParameter value="3000"/>
+              </bpsim:TriggerCount>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_784dd4ac-743c-3f11-0169-8375ca90ad73">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.56"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_f16bf808-8de0-6b85-6a7d-a239788f6eef">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.44"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_89f92e11-8ea6-d53e-bdf4-e985e2dfcf9b">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.69"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_a76df33b-b95b-3b2d-8f7f-41a5e647b1b1">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.31"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_10c6ac0c-b13b-7f50-5546-fb304ea0d308">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.68"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_0d54ab7f-894c-f9b1-3a4a-a1bfe8d57d60">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.32"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_93123ed7-06dc-5053-450e-a4c1a27abf66">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.22"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_c4f11fe1-3760-9ae8-9076-07de3978aded">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.19"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="sequenceFlows_7cf1508c-fda4-1442-2e65-a5d1d1a77f81">
+            <bpsim:ControlParameters>
+              <bpsim:Probability>
+                <bpsim:FloatingParameter value="0.59"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role0">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="53" validFor="4"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role1">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="9" validFor="1"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role2">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="58" validFor="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role3">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="59" validFor="3"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role4">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="1" validFor="2"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="role5">
+            <bpsim:ResourceParameters>
+              <bpsim:Quantity>
+                <bpsim:NumericParameter value="0"/>
+                <bpsim:NumericParameter value="49" validFor="2"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_219c0383-7c8f-583b-afed-d89b511f41db">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="4390.75" standardDeviation="621" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role2',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_6a7ba182-b672-925c-39db-48f9580c475b">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="137" standardDeviation="22.72" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role1',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_67171d06-f6a7-f7b4-52a9-1359034a1d0d">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="130" standardDeviation="15" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role1',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_98da5344-ab55-ad60-825a-6ca407695b6b">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="0.02"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role4',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_21579b07-30ab-2c7f-df51-219dfa30eb72">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="4.25"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role5',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_deb4b459-ff13-b0f3-0a38-8305d62478de">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NegativeExponentialDistribution mean="807.34"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role3',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_7e1ea195-3071-eb10-2687-fe2396c11aaf">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:TruncatedNormalDistribution mean="125.9" standardDeviation="27.8" min="0" max="6000"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role1',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_fc5d7a30-7083-c180-4ee4-095026a6b447">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="0.02"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role4',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_14660ced-208d-9189-076d-bf98985f0993">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NegativeExponentialDistribution mean="529"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role0',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="tasks_9980786c-add3-523c-4b33-7269dba7747f">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:FloatingParameter value="6.21"/>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:ProcessingTime>
+              <bpsim:WaitTime>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:WaitTime>
+            </bpsim:TimeParameters>
+            <bpsim:PropertyParameters>
+              <bpsim:QueueLength>
+                <bpsim:ResultRequest>mean</bpsim:ResultRequest>
+              </bpsim:QueueLength>
+            </bpsim:PropertyParameters>
+            <bpsim:VendorExtension name="l-sim-task-configuration-v1">
+              <lsim:TaskConfiguration xmlns:lsim="urn:lanner.simulation.lsim.model.data">
+                <lsim:EventLog/>
+              </lsim:TaskConfiguration>
+            </bpsim:VendorExtension>
+            <bpsim:ResourceParameters>
+              <bpsim:Selection>
+                <bpsim:ExpressionParameter value="bpsim:getResource('role0',1)"/>
+              </bpsim:Selection>
+            </bpsim:ResourceParameters>
+          </bpsim:ElementParameters>
+          <bpsim:Calendar name="Case Arrival Calendar" id="Case Arrival Calendar">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T230000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="0" id="0">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T200000
+DTSTART:20211001T090000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,TU,MO,TH,WE,FR,SU
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="1" id="1">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T160000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=TH,MO,FR,TU,WE
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="2" id="2">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T230000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,MO,SU,TU,WE,TH,FR
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="3" id="3">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T220000
+DTSTART:20211001T080000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,TH,MO,FR,TU,WE
+END:VCALENDAR
+</bpsim:Calendar>
+          <bpsim:Calendar name="4" id="4">
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTEND:20211001T200000
+DTSTART:20211001T090000
+END:VEVENT
+RRULE:FREQ=DAILY;BYDAY=SA,MO,TU,TH,WE,FR
+END:VCALENDAR
+</bpsim:Calendar>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+  </bpmn2:relationship>
+</bpmn2:definitions>
