@@ -7,7 +7,7 @@ BPSimpy library generates executable simulation model compliant with the Busines
 
 Here, we provide the tutorial and the code to use the BPSimpy in a case study.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nZ_uodsHm3wTAMuZsEtE2xu9uxrcP4Vi?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gSugfJX4WQpJzMq9zmWWtTf14bf0hqFM?usp=sharing)
 
 ### Data
 
