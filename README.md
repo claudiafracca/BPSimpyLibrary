@@ -18,9 +18,9 @@ The event log is taken from the Second International Business Process Intelligen
 Link video
 
 ### Install the BPSimpy Library in your Computer
-Download the library from this Github repository;
-Using the command prompt, go in the 'dist' directory;
-Run 'BPSimpy-0.1.0-py3-none-any.whl' file.
+ - Download the library from this Github repository;
+ - Using the command prompt, go in the 'dist' directory;
+ - Run 'BPSimpy-0.1.0-py3-none-any.whl' file.
 
 ### More information
 
