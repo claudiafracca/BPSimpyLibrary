@@ -1,4 +1,4 @@
-# BPSimpy Library
+# BPSimpy Library: A Python Library for WfMC-Standard Process-Simulation Specifications
 
 A Python library that can be used to programmatically generate the executable simulation model for simulation of business processes.
 BPSimpy library generates executable simulation model compliant with the Business Process Simulation Specification ([BPSim](https://www.bpsim.org/)), a standard from WfMC (Workflow Management Coalition) that enables a seamless integration with different simulation software products.
