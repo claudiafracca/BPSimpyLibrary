@@ -17,6 +17,11 @@ The event log is taken from the Second International Business Process Intelligen
 
 Link video
 
+### Install the BPSimpy Library in your Computer
+Download the library from this Github repository;
+Using the command prompt, go in the 'dist' directory;
+Run 'BPSimpy-0.1.0-py3-none-any.whl' file.
+
 ### More information
 
 For more informations please see also [BPSim Documentation](https://www.bpsim.org/specifications/2.0/WFMC-BPSWG-2016-01.pdf) and [BPSim Implementer's Guide](https://www.bpsim.org/).
