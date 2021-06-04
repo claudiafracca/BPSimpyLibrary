@@ -11,11 +11,11 @@ Here, we provide the tutorial and the necessary code to use the BPSimpy in a cas
 
 ### Data
 
-The event log is taken from the Second International Business Process Intelligence Challenge [BPI2012](https://www.win.tue.nl/bpi/doku.php?id=2012:challenge)
+The event log is taken from the Second International Business Process Intelligence Challenge [BPI2012](https://www.win.tue.nl/bpi/doku.php?id=2012:challenge).
 
 ### Video
 
-Link video
+A screencast demonstrating the usage of the BPSimpy library are available [here](https://drive.google.com/file/d/1YamWB-Liijs67xw6JAA2Ukxdb1JvVmWs/view?usp=sharing). 
 
 ### Install the BPSimpy Library in your Computer
  - Download the library from this Github repository;
