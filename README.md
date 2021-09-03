@@ -15,7 +15,7 @@ The event log is taken from the Second International Business Process Intelligen
 
 ### Video
 
-A screencast demonstrating the usage of the BPSimpy library are available [here](https://drive.google.com/file/d/1YamWB-Liijs67xw6JAA2Ukxdb1JvVmWs/view?usp=sharing). 
+A screencast demonstrating the usage of the BPSimpy library are available [here](https://drive.google.com/drive/folders/13t1N9UHeX4Gxec7LO2ellFABWOCJymXO?usp=sharing). 
 
 ### Install the BPSimpy Library in your Computer
  - Download the library from this Github repository;
