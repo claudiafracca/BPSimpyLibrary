@@ -12,10 +12,10 @@ BPSimpy/Scenario.py
 BPSimpy/ScenarioParameters.py
 BPSimpy/TimeParameters.py
 BPSimpy/__init__.py
-BPSimpy/prova.py
 BPSimpy/utility.py
 BPSimpy.egg-info/PKG-INFO
 BPSimpy.egg-info/SOURCES.txt
 BPSimpy.egg-info/dependency_links.txt
+BPSimpy.egg-info/file
 BPSimpy.egg-info/requires.txt
 BPSimpy.egg-info/top_level.txt

@@ -141,7 +141,7 @@ class Parameter():
 
 	# METHOD TO CREATE DISTRIBUTION DATAPOINTS
 	def createUserDistributionDataPoint(self, points, pointer, discrete, timeUnit):
-		attrib = {}
+		attrib = {'discrete': str(discrete)}
 		user_parameter = etree.SubElement(pointer, utility.BPSIM + 'UserDistribution', attrib = attrib)
 		if points is not None:
 			utility.checkDataFrameType(points)

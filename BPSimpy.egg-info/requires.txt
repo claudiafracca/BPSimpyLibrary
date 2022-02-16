@@ -1,5 +1,5 @@
 elementpath
-lxml
+lxml>=4.5
 datetime
 pandas
 icalendar
