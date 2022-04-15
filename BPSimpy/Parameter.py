@@ -145,7 +145,7 @@ class Parameter():
 		user_parameter = etree.SubElement(pointer, utility.BPSIM + 'UserDistribution', attrib = attrib)
 		if points is not None:
 			utility.checkDataFrameType(points)
-			if points['probability'].sum() != 1:
+			if sum(points['probability']) != 1:
 				raise ValueError('ERROR: The sum of all data point probabilities must be equal to 1.0.')
 			else:
 				new_points = points.apply(tuple, axis=1).tolist()
