@@ -145,18 +145,18 @@ class Parameter():
 		user_parameter = etree.SubElement(pointer, utility.BPSIM + 'UserDistribution', attrib = attrib)
 		if points is not None:
 			utility.checkDataFrameType(points)
-			if sum(points['probability']) != 1:
-				raise ValueError('ERROR: The sum of all data point probabilities must be equal to 1.0.')
-			else:
-				new_points = points.apply(tuple, axis=1).tolist()
-				for i in range(len(new_points)):
-					new_parameter1= etree.SubElement(user_parameter, utility.BPSIM + 'UserDistributionDataPoint', attrib = {'probability': str(new_points[i][0])})
-					value = new_points[i][1]
-					typeValue = self.checkParameterType(value)
-					if typeValue == "DurationParameter":
-						value = utility.getDurationType(value)
-						timeUnit = None
-					new_value = etree.SubElement(new_parameter1, utility.BPSIM + typeValue, attrib = {'value': str(value)})
+			#if sum(points['probability']) != 1:
+			#	raise ValueError('ERROR: The sum of all data point probabilities must be equal to 1.0.')
+			#else:
+			new_points = points.apply(tuple, axis=1).tolist()
+			for i in range(len(new_points)):
+				new_parameter1= etree.SubElement(user_parameter, utility.BPSIM + 'UserDistributionDataPoint', attrib = {'probability': str(new_points[i][0])})
+				value = new_points[i][1]
+				typeValue = self.checkParameterType(value)
+				if typeValue == "DurationParameter":
+					value = utility.getDurationType(value)
+					timeUnit = None
+				new_value = etree.SubElement(new_parameter1, utility.BPSIM + typeValue, attrib = {'value': str(value)})
 	
 	# METHODS TO ADD PARAMETERS			
 	def addParameterWithEnumList(self, value, timeUnit, validFor, tag, enum_list, pointer, parameterPointer, name, type):
