@@ -121,7 +121,7 @@ class Parameter():
 		if nameDistribution == 'UserDistribution':
 			attributes = {'discrete':discrete, 'points':points}
 			attributes = utility.filterNoneAttributes(attributes)
-			self.checkDistributionAttributes('UserDistribution',attributes)
+			self.checkDistributionAttributes('UserDistribution', attributes)
 			self.checkBooleanType(discrete, 'discrete')
 		else:
 			attributes = {'shape':shape, 'scale':scale, 'probability':probability, 'trials':trials,
@@ -140,8 +140,11 @@ class Parameter():
 		return attributes
 
 	# METHOD TO CREATE DISTRIBUTION DATAPOINTS
-	def createUserDistributionDataPoint(self, points, pointer, discrete, timeUnit):
-		attrib = {'discrete': str(discrete)}
+	def createUserDistributionDataPoint(self, points, pointer, discrete, timeUnit, validFor):
+		if validFor is not None:
+			attrib = {'discrete': str(discrete), 'validFor': str(validFor)}
+		else:
+			attrib = {'discrete': str(discrete)}
 		user_parameter = etree.SubElement(pointer, utility.BPSIM + 'UserDistribution', attrib = attrib)
 		if points is not None:
 			utility.checkDataFrameType(points)

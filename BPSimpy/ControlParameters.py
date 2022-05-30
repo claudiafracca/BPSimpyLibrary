@@ -42,7 +42,7 @@ class ControlParameters(Parameter):
 			if self.triggerTimePointer is None:
 				self.triggerTimePointer=etree.SubElement(self.controlPointer, utility.BPSIM + "InterTriggerTimer")
 			if nameDistribution == 'UserDistribution':
-				super().createUserDistributionDataPoint(points, self.triggerTimePointer, discrete, timeUnit)
+				super().createUserDistributionDataPoint(points, self.triggerTimePointer, discrete, timeUnit, validFor)
 			else:
 				new_parameter= etree.SubElement(self.triggerTimePointer, utility.BPSIM + nameDistribution, attrib = self.triggerTimerAttrib)
 			if self.verbosity==0:

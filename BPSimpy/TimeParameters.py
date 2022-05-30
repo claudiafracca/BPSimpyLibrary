@@ -49,7 +49,7 @@ class TimeParameters(Parameter):
 			if pointer is None:
 				pointer=etree.SubElement(self.timePointer, utility.BPSIM + name)
 			if nameDistribution == 'UserDistribution':
-				super().createUserDistributionDataPoint(points, pointer, discrete, timeUnit)
+				super().createUserDistributionDataPoint(points, pointer, discrete, timeUnit, validFor)
 			else:
 				new_parameter= etree.SubElement(pointer, utility.BPSIM + nameDistribution, attrib = attributes)
 			if self.verbosity==0:
