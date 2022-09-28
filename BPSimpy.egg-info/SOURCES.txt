@@ -1,3 +1,4 @@
+COPYING.txt
 README.md
 setup.py
 BPSimpy/BPSim.py
